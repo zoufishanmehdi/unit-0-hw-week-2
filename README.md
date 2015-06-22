@@ -5,6 +5,8 @@ You are provided with a `Person` class. This class has private properties `name`
 * Write a method called `checkSameCity` which accepts one parameter of type `Person *` and checks if they live in the same city. The method should return a boolean value.  
 * A Person has recently had a child, whose name is 'Abc'. Write a method called `registerChild` which takes 0 parameters and returns a new `Person *` instance represeting the child, which has the same `phoneNumber` and `city` as the parent.
 
+> **Hint:** NSString is a class. A person's city property is a variable of type NSString. You can send NSString a message asking if it's equal to another NSString (https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/isEqualToString:)
+
 ### 2. Cryptography : Caesar Cipher
 
 The Roman General Julius Caesar used to correspond with his generals using a secret code. He devised a way of encrypting his messages using a simple encryption scheme now known as Caesar Cipher or Shift Cipher. You can read more about it [here](https://en.wikipedia.org/wiki/Caesar_cipher) and watch a video [here](https://www.youtube.com/watch?v=o6TPx1Co_wg)
