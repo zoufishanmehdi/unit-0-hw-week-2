@@ -10,8 +10,14 @@ You are provided with a `Person` class. This class has private properties `name`
 The Roman General Julius Caesar used to correspond with his generals using a secret code. He devised a way of encrypting his messages using a simple encryption scheme now known as Caesar Cipher or Shift Cipher. You can read more about it [here](https://en.wikipedia.org/wiki/Caesar_cipher)
 
 * You are given a class called `CaesarCipher` with methods `encode` and `decode`
-* Being amateur codebreakers, we want to know if two distinct looking ciphers correspond to the same input message. Write a method called codeBreaker, which accepts two cipher strings as paramaters and returns a boolean value which tells us whether they are actually the same input message encoded using two different offsets. ***hint:*** the maximum offset is 25
+* Being amateur codebreakers, we want to know if two distinct looking ciphers correspond to the same input message. Write a method called codeBreaker, which accepts two cipher strings as paramaters and returns a boolean value which tells us whether they are actually the same input message encoded using two different offsets. ***hint:*** the maximum offset is 25  
 * There are multiple ways to do this. Try to come up with as many solutions as you can.
+
+> **Example:**   
+> okmg = "mike", offset 2    
+> tprl = "mike", offset 7  
+>
+> Both are the same input message, but different offset. Your method would return YES in this case
 
 ### 3. BONUS : Voting System
 
