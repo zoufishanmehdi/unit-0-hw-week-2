@@ -2,8 +2,8 @@
 
 You are provided with a `Person` class. This class has private properties `name`, `phoneNumber` and `city`, along with their getter and setter methods.
 
-* Write a method called `checkSameCity` which accepts one parameter of type `Person` and checks if they live in the same city. The function should return a boolean value.  
-* A Person has recently had a child, whose name is 'Abc'. Write a method called `registerChild` which takes 0 parameters and returns a new `Person` instance represeting the child, which has the same `phoneNumber` and `city` as the parent.
+* Write a method called `checkSameCity` which accepts one parameter of type `Person *` and checks if they live in the same city. The function should return a boolean value.  
+* A Person has recently had a child, whose name is 'Abc'. Write a method called `registerChild` which takes 0 parameters and returns a new `Person *` instance represeting the child, which has the same `phoneNumber` and `city` as the parent.
 
 ### 2. Cryptography : Caesar Cipher
 
