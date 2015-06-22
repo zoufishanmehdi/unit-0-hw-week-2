@@ -32,7 +32,6 @@
             continue;
         }
 
-
         int low = islower(buffer[i]) ? 'a' : 'A';
         result[i] = (buffer[i]%low + offset)%26 + low;
     }
