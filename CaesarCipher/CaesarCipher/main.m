@@ -25,31 +25,28 @@
     unichar result[count];
     unichar buffer[count];
     [string getCharacters:buffer range:NSMakeRange(0, count)];
-    
+
     for (int i = 0; i < count; i++) {
-        if (buffer[i] == ' ') {
+        if (buffer[i] == ' ' || ispunct(buffer[i])) {
             result[i] = buffer[i];
             continue;
         }
-        
+
+
         int low = islower(buffer[i]) ? 'a' : 'A';
-        int high = islower(buffer[i]) ? 'z' : 'Z';
-        BOOL wrap = buffer[i] + offset > high || buffer[i] + offset < low;
-        
-        result[i] = wrap ? ((buffer[i] + offset) % high) + (low - 1) : buffer[i] + offset;
+        result[i] = (buffer[i]%low + offset)%26 + low;
     }
-    
+
     return [NSString stringWithCharacters:result length:count];
 }
 
 - (NSString *)decode:(NSString *)string offset:(int)offset {
-    return [self encode:string offset:26 - offset];
+    return [self encode:string offset: (26 - offset)];
 }
-
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-       
+
     }
 }
