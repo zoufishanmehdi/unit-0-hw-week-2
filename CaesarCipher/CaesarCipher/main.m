@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CaesarCipher.h"
 
 @interface CaesarCipher : NSObject
 
