@@ -18,6 +18,9 @@
 @implementation CaesarCipher
 
 - (NSString *)encode:(NSString *)string offset:(int)offset {
+    if (offset > 25) {
+        NSAssert(offset < 26, @"offset is out of range. 1 - 25");
+    }
     unsigned long count = [string length];
     unichar result[count];
     unichar buffer[count];
@@ -48,6 +51,5 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
-
     }
 }
