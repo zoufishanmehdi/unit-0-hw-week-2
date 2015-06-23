@@ -15,8 +15,8 @@ The Roman General Julius Caesar used to correspond with his generals using a sec
 * Being amateur codebreakers, we want to know if two distinct looking ciphers correspond to the same input message. Write a method called codeBreaker, which accepts two cipher strings as paramaters and returns a boolean value which tells us whether they are actually the same input message encoded using two different offsets. ***hint:*** the maximum offset is 25
 * There are multiple ways to do this. Try to come up with as many solutions as you can.
 
-> **Example:**
-> okmg = "mike", offset 2
+> **Example:**  
+> okmg = "mike", offset 2  
 > tprl = "mike", offset 7
 >
 > Both are the same input message, but different offset. Your method would return YES in this case
