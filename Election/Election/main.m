@@ -202,9 +202,55 @@
 @end
 
 
+//Voting Simulator class
+@interface Voting Simulator : NSObject
+
+-(void)vote;
+
+@end
+
+@implementation Voting Simulator {
+    NSInteger;
+}
+
+-(void)vote {
+    return 1;
+}
+
+@end
+
+//[carl setName:@"Carl"];//sending a message to the object Carl
+//
+//[carl setCity:@"Okinawa"];
+//[mike setCity:@"New York"];
+//
+//
+//BOOL citiesAreSame = [mike checkSameCity:carl];
+//NSLog(@"%d", citiesAreSame);
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        Election *name = [[Election alloc] init];
+        Election *contender = [[Election alloc] init];
+         ElectionManager *manageElection = [[ElectionManager alloc] init];
+      
+        
+        [name setElectionName:@"Time for a change"];
+        
+        NSMutableArray *Contender = [NSMutableArray arrayWithContenders:@"Donald Trump", @"Snoop Dog", @"Sarah Palin", nil];
+        
+        NSLog(@"%@", [myArray objectAtIndex:i]);
+        
+        [manageElection manage:Election];
+        
+          [manageElection ElectionManager:initiatePolling];
+        
+        
+        [manageElection ElectionManager:displayResults];
+        
+        
         
     }
     return 0;

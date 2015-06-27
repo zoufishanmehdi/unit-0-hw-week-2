@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
+//we want to know if two distinct looking ciphers correspond to the same input message. Write a method called codeBreaker, which accepts two cipher strings as paramaters and returns a boolean value which tells us whether they are actually the same input message encoded using two different offsets. hint: the maximum offset is 25
+
+
 #import <Foundation/Foundation.h>
 
 @interface CaesarCipher : NSObject
@@ -13,10 +16,15 @@
 - (NSString *)encode:(NSString *)string offset:(int)offset;
 - (NSString *)decode:(NSString *)string offset:(int)offset;
 
+- (BOOL) checkSameString:(NSString *)decode withString:(NSString *)otherString;
+
 @end
 
 
-@implementation CaesarCipher
+@implementation CaesarCipher {
+    NSString *_encode;
+    NSString *_decode;
+}
 
 - (NSString *)encode:(NSString *)string offset:(int)offset {
     if (offset > 25) {
@@ -50,11 +58,36 @@
     return [self encode:string offset: (26 - offset)];
 }
 
+
+- (BOOL) checkSameString:(NSString *)decode withString:(NSString *)otherString {
+    
+    for (int i = 0; i < 26; i++) {
+        NSString *encoded = [self encode:decode offset:i];
+        BOOL equal = [encoded isEqualToString:otherString];
+        if (equal) {
+            return YES;
+        }
+    }
+    
+    return NO;
+    
+}
+    
 @end
 
+    
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+       
+        CaesarCipher *cipher = [[CaesarCipher alloc] init];
+      
+        NSString *phrase1 = @"okmg";
+        NSString *phrase2 = @"tprl";
+        
+        BOOL stringsAreSame = [cipher checkSameString:phrase1 withString:phrase2];
+        NSLog(@"%d", stringsAreSame);
+        
         
     }
 }
